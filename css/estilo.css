@@ -1,0 +1,609 @@
+/*
+NOTA A CORECTOR/ES, AL HACER ESTA TAREA ENTENDIA MENOS EL @MEDIA Y, POR TANTO, EL CODIGO REQUIERE MUCHA OPTIMIZACION EN CASO DE SER USADO, LO SE, PERO POR CUESTIONES DE TIEMPO TUVE QUE DEJARLO ASI. DISCULPE LOS INCONVENIENTES
+
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+    background-color: #59407b;
+    background-image: url(../multimedia/estructurales/background.png);
+    background-size: 90vw;
+    background-repeat: repeat;
+    font-family: 'Bebas Neue', cursive;
+}
+.logo{
+    width: 13.2vw ;
+    border-radius: 50%;
+    margin: .6vw;
+
+}
+
+.link{
+    text-decoration: none;
+    color: #000;
+}
+.headerDiv{
+    position: fixed;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 14.3vw;
+    width: 100%;
+    background-color: #552583;
+
+}
+
+.menuNavBar{
+    display: flex;
+    width: 100%;
+}
+
+.HeaderLi{
+    margin-left: auto;
+    font-size: 8vw;/*tomar nota de las unidades relativas*/
+    justify-content: space-around;    
+    width:max-content;
+    align-items: stretch;
+    padding: 0 4.2vw;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.HeaderLi:hover, .SubHeaderLi:hover{
+    background-color: #9a88b1;
+
+}
+
+.SubMenuNavBar{
+    width: 100%;
+    background-color: #552583;
+    margin: 0;
+}
+
+
+
+ul {
+    list-style: none;
+    font-size:0; /* truco por el uso de inline-block*/
+    width: 100%;
+}
+li {
+    display: inline-block;
+    width: 25%;
+    position:relative;
+    font-size: 5vw;
+    }
+ul ul {
+    position: absolute;
+    display: none;
+    }
+ul ul li {
+    display: block;
+    }
+ul li:hover ul {
+    display:block;
+    background-color: #9a88b1;
+    padding-top: 1vw;
+    padding-left: 4.4vw;
+    margin: -2vw -4.2vw;
+}
+
+.MainH{
+    width: 100%;
+    height: 19vw;
+    background-color: #000;
+    background-image: url();
+    background-size: cover;
+    color: #bbb;
+    text-align: center;
+    font-size: 9vw;
+    opacity: 1;
+    margin-top: 13vw;
+    margin-left: 0%;
+    margin-bottom: 6vw;
+    line-height: 1.5;
+    
+}
+
+h2{
+    margin-top: 1vw;
+}
+
+h3{
+    width:100%;
+    text-align: center;
+    font-size: 15vw;
+    height: 17vw;
+    margin-bottom: 2vw;
+    background-color: #000;
+    color: #bbb;
+}
+
+.creditos{
+    
+    margin: auto;
+    width: 90%;
+    flex-wrap: nowrap;
+    font-size: 2vw;
+    padding: .8vw;
+    background-color: #000;
+    border: #FFF .8 solid;
+    color: #FFF;
+}
+        
+    
+
+
+.DivMainVid{
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    margin-bottom: 2vw;
+}
+.MainVid{
+    width: 100%;
+    padding: 0vh;
+    height: 68vw;
+    text-align: center;
+}
+
+.flyercontainer{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    border: #000 .7vw solid;
+    background-color: #000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    text-align: center;
+}
+.flyer{
+    margin: auto;
+    width: 35vw;
+}
+.linkpago{
+    width:100%;
+    text-align: center;
+    font-size: 2.5vw;
+    text-decoration: none;
+    background-color: #000;
+    color: #bbb;
+}
+.DivFooter{
+    display: flex;
+    width: 100%;
+    height: 6vw;
+    background-color: #552583;    
+}
+.DivFooter p{
+    width: 35vw;
+    margin: 0 1.5vw ;
+    font-size: 5vw;
+}
+
+.IcoFooter{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin-left: 3vw;
+    margin-right: 6vw;
+    padding-top: 0vw;
+}
+
+.IcoFooter :hover{
+    color: #9a88b1;
+}
+.FooterLink{
+    color: #000;
+}
+
+@media screen and (min-width: 300px){
+    .linkpago{
+        width:100%;
+        text-align: center;
+        font-size: 1em;
+        text-decoration: none;
+        background-color: #000;
+        color: #bbb;
+    }
+    .flyer{
+        margin: auto;
+        width: 75vw;
+    }
+    
+}
+
+
+@media screen and (min-width: 600px) {
+    .logo{
+        width: 8.6vw ;
+        border-radius: 50%;
+        margin: .25vw;
+    
+    }
+    .headerDiv{
+        position: fixed;
+        top:0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 9.3vw;
+        width: 100%;
+        background-color: #552583;
+    
+    }
+    
+    .HeaderLi{
+        margin-left: auto;
+        font-size: 6vw;
+        justify-content: space-around;    
+        width:max-content;
+        align-items: stretch;
+        padding: 0 4.2vw;
+        text-align: center;
+        line-height: 1.8;
+    }
+    ul {
+        list-style: none;
+        font-size:0; /* truco por el uso de inline-block*/
+        width: 100%;
+    }
+    li {
+        display: inline-block;
+        width: 25%;
+        position:relative;
+        font-size: 4vw;
+        }
+    ul ul {
+        position: absolute;
+        display: none;
+        }
+    ul ul li {
+        display: block;
+        }
+    ul li:hover ul {
+        display:block;
+        background-color: #9a88b1;
+        padding-top: 1vw;
+        padding-left: 4.4vw;
+        margin: -2vw -4.2vw;
+    }
+    
+    .MainH{
+        width: 100%;
+        height: 13vw;
+        background-color: #000;
+        background-image: url();
+        background-size: cover;
+        color: #bbb;
+        text-align: center;
+        font-size: 6vw;
+        opacity: 1;
+        margin-top: 13vw;
+        margin-left: 0%;
+        margin-bottom: -.1vw;
+        line-height: 1.5;
+        
+    }
+    
+    h2{
+        margin-top: 1vw;
+    }
+    
+    h3{
+        width:100%;
+        text-align: center;
+        font-size: 9vw;
+        height: 11vw;
+        margin-top: -0.5vw;
+        margin-bottom: 2vw;
+        background-color: #000;
+        color: #bbb;
+    
+    }
+    .DivMainVid{
+        width: 100%;
+        background-color: #000;
+        display: flex;
+        margin-bottom: 2.5vw;
+    }
+    .MainVid{
+        width: 100%;
+        padding: 0vh;
+        height: 50vw;
+        text-align: center;
+    }
+    
+    .linkpago{
+        width:100%;
+        text-align: center;
+        font-size: 4vw;
+        text-decoration: none;
+        background-color: #000;
+        color: #bbb;
+    }
+    
+    
+    .DivFooter{
+        display: flex;
+        width: 100%;
+        height: 4.5vw;
+        background-color: #552583;    
+    }
+    .DivFooter p{
+        width: 22vw;
+        margin: 0 0 0 0 ;
+        padding-top: .16vw;
+        font-size: 3.5vw;
+    }
+    
+    .IcoFooter{
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+        margin-left: 3vw;
+        margin-right: 6vw;
+        margin-top:0vw;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .logo{
+        width: 6.6vw ;
+        border-radius: 50%;
+        margin: .25vw;
+    
+    }
+    .headerDiv{
+        position: fixed;
+        top:0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 7.5vw;
+        width: 100%;
+        background-color: #552583;
+    
+    }
+    
+    .HeaderLi{
+        margin-left: auto;
+        font-size: 5vw;
+        justify-content: space-around;    
+        width:max-content;
+        align-items: stretch;
+        padding: 0 4.2vw;
+        text-align: center;
+        line-height: 1.5;
+    }
+    ul {
+        list-style: none;
+        font-size:0; /* truco por el uso de inline-block*/
+        width: 100%;
+    }
+    li {
+        display: inline-block;
+        width: 25%;
+        position:relative;
+        font-size: 3.1vw;
+        }
+    ul ul {
+        position: absolute;
+        display: none;
+        }
+    ul ul li {
+        display: block;
+        }
+    ul li:hover ul {
+        display:block;
+        background-color: #9a88b1;
+        padding-top: 1vw;
+        padding-left: 4.4vw;
+        margin: -2vw -4.2vw;
+    }
+    
+    .MainH{
+        width: 100%;
+        height: 9vw;
+        background-color: #000;
+        background-image: url();
+        background-size: cover;
+        color: #bbb;
+        text-align: center;
+        font-size: 4.5vw;
+        opacity: 1;
+        margin-top: 11vw;
+        margin-left: 0%;
+        margin-bottom: -1vw;
+        line-height: 1.5;
+        
+    }
+    
+    h2{
+        margin-top: 1vw;
+    }
+    
+    h3{
+        width:100%;
+        text-align: center;
+        font-size: 7vw;
+        height: 8vw;
+        margin-top: -0.5vw;
+        margin-bottom: 2vw;
+        background-color: #000;
+        color: #bbb;
+    
+    }
+    .DivMainVid{
+        width: 100%;
+        background-color: #000;
+        display: flex;
+        margin-bottom: 2.5vw;
+    }
+    .MainVid{
+        width: 100%;
+        padding: 0vh;
+        height: 47vw;
+        text-align: center;
+    }
+    
+    
+    .DivFooter{
+        display: flex;
+        width: 100%;
+        height: 4.5vw;
+        background-color: #552583;    
+    }
+    .DivFooter p{
+        width: 22vw;
+        margin: 0 0 0 0 ;
+        padding-top:0;
+        font-size: 3.6vw;
+        line-height: -.8;
+    }
+    
+    .IcoFooter{
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+        margin-left: 3vw;
+        margin-right: 6vw;
+        margin-top: .4vw;
+    }
+
+}
+
+
+@media screen and (min-width: 1201px) {
+    .logo{
+        width: 4.6vw ;
+        border-radius: 50%;
+        margin: .25vw;
+    
+    }
+    .headerDiv{
+        position: fixed;
+        top:0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 5.2vw;
+        width: 100%;
+        background-color: #552583;
+    
+    }
+    
+    .HeaderLi{
+        margin-left: auto;
+        font-size: 3.5vw;
+        justify-content: space-around;    
+        width:max-content;
+        align-items: stretch;
+        padding: 0 4.2vw;
+        text-align: center;
+        line-height: 1.5;
+    }
+    ul {
+        list-style: none;
+        font-size:0; /* truco por el uso de inline-block*/
+        width: 100%;
+    }
+    li {
+        display: inline-block;
+        width: 25%;
+        position:relative;
+        font-size: 2.1vw;
+        }
+    ul ul {
+        position: absolute;
+        display: none;
+        }
+    ul ul li {
+        display: block;
+        }
+    ul li:hover ul {
+        display:block;
+        background-color: #9a88b1;
+        padding-top: 1vw;
+        padding-left: 4.4vw;
+        margin: -.6vw -4.2vw;
+    }
+    
+    .MainH{
+        width: 100%;
+        height: 3.5vw;
+        background-color: #000;
+        background-image: url();
+        background-size: cover;
+        color: #bbb;
+        text-align: center;
+        font-size: 2.5vw;
+        opacity: 1;
+        margin-top: 7vw;
+        margin-left: 0%;
+        margin-bottom: .3vw;
+        line-height: 1.25;
+        
+    }
+    
+    h2{
+        margin-top: 1vw;
+    }
+    
+    h3{
+        width:100%;
+        text-align: center;
+        font-size: 4vw;
+        height: 4.4vw;
+        margin-bottom: 2vw;
+        background-color: #000;
+        color: #bbb;
+    
+    }
+    .DivMainVid{
+        width: 100%;
+        background-color: #000;
+        display: flex;
+        margin-bottom: 2.5vw;
+    }
+    .MainVid{
+        width: 80%;
+        padding: 0vh;
+        height: 34vw;
+        margin: auto;
+    }
+    
+    
+    .DivFooter{
+        display: flex;
+        width: 100%;
+        height: 2.8vw;
+        padding-top: .6vw;
+        background-color: #552583;    
+    }
+    .DivFooter p{
+        width: 22vw;
+        margin: 0 0 0 0 ;
+        padding-left: 40vw;
+        font-size: 2vw;
+        line-height: -2;
+    }
+    
+    .IcoFooter{
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+        margin-left: 3vw;
+        margin-right: 6vw;
+        margin-top: 0vw;
+        padding-bottom: -1vw;
+    }}
+    
